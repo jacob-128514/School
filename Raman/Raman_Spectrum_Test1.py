@@ -17,9 +17,10 @@ spec.integration_time_micros(70*1000) # 70 ms
 
 #Converting wavelengths to waveshifts
 Laser_wavelength = 532
+Length = len(spec.intensities())
 waveshifts = np.empty(Length)
 
-for i in range(0, len(spec.intensities())):
+for i in range(0, Length):
     waveshifts[i] = ((1/Laser_wavelength)-(1/spec.wavelengths()[i]))*10**7
 
 #Storing intensities and waveshifts
