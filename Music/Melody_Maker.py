@@ -1,3 +1,5 @@
+# outputs a basic circle of fifths progression
+
 import pyaudio
 import random
 import numpy as np
