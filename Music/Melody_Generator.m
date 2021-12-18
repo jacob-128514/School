@@ -1,3 +1,5 @@
+%creates a pseudo random chord progression with a melody line
+
 clc;
 clear;
 
