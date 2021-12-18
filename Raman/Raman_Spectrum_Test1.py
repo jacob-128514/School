@@ -17,8 +17,6 @@ spec.integration_time_micros(70*1000) # 70 ms
 
 #Converting wavelengths to waveshifts
 Laser_wavelength = 532
-Length = len(spec.intensities())
-intensities = np.array(spec.intensities())
 waveshifts = np.empty(Length)
 
 for i in range(0, len(spec.intensities())):
@@ -26,7 +24,7 @@ for i in range(0, len(spec.intensities())):
 
 #Storing intensities and waveshifts
 xvalues = np.array(waveshifts)
-yvalues = np.array(intensities)
+yvalues = np.array(spec.intensities())
 
 #Finding local maxima (within N data points to filter noise)
 N = 100
